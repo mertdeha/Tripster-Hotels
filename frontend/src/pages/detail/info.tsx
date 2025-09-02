@@ -7,6 +7,7 @@ interface Props {
 }
 
 const Info: FC<Props> = ({ place }) => {
+
   return (
     <>
       <div className="flex my-6 justify-between">
@@ -43,7 +44,7 @@ const Info: FC<Props> = ({ place }) => {
 
           <iframe
             className="w-full h-full rounded-md"
-            src={`https://www.google.com/maps/embed/v1/search?key=AIzaSyBsIeyT619QHjkdSUcn_A0c1Bqy0X8yn8s&q=${place.location}`}
+            src={`https://www.google.com/maps/embed/v1/search?key=${import.meta.env.MAP_API_KEY}&q=${place.location}`}
             loading="lazy"
           ></iframe>
         </div>
